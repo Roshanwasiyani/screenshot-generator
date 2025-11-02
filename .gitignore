@@ -10,5 +10,11 @@ src/__pycache__/
 src/api/__pycache__
 src/api/__pycache__/
 
+src/service/__pycache__
+src/service/__pycache__/
+
+src/utils/__pycache__
+src/utils/__pycache__/
+
 static
 static/
