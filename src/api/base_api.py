@@ -8,7 +8,7 @@ from utils.environments import Environments as ENV
 ns_base_template = Namespace('screenshot', description='Base Template')
 
 
-@ns_base_template.route('/')
+@ns_base_template.route('')
 class BaseTemplate(Resource):
     def get(self):
         """Render the form on GET"""
@@ -45,11 +45,11 @@ class BaseTemplate(Resource):
 
             # Save the returned image in /static
             image_extension = format_ if format_ != 'jpeg' else 'jpg'
-            image_path = os.path.join('static', f'screenshot.{image_extension}')
+            image_path = os.path.join('static', f'{target_url.split(".com")[0].split("://")[1]}.{image_extension}')
             with open(image_path, 'wb') as f:
                 f.write(response.content)
 
-            screenshot_url = f"/static/screenshot.{image_extension}"
+            screenshot_url = image_path
 
         except requests.exceptions.RequestException as e:
             print(f"Error capturing screenshot: {e}")
