@@ -72,12 +72,20 @@ screenshot-generator/
 ├── app.py
 ├── src
     └── api
-        └── base_api.py
+        └── __init__.py
+        └── screenshot_api.py
         └── health_check_api.py
-├── templates/
-│   └── index.html
-├── static/
-│   ├── screenshot.png
+    └── service
+        └── __init__.py
+        └── screenshot_service.py
+    └── utils
+        └── __init__.py
+        └── enviornments.py
+    └── static
+        └── {Contains ScreenShots}
+    └── templates
+        └── index.html
 ├── requirements.txt
 ├── .env
+├── .env.sample {Contain sample keys for Environment Variables}
 └── README.md
