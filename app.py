@@ -6,7 +6,8 @@ from src.api.health_check_api import ns_health_check
 from src.api.base_api import ns_base_template
 
 app = Flask(__name__)
-api = Api(app)
+app.url_map.strict_slashes = False
+api = Api(app, version='1.0', title='Website Screenshot Generator', prefix='/api/v1')
 
 
 # Register api
