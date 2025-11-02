@@ -4,5 +4,7 @@
 .env
 .env/
 
-__pycache__
-__pycache__/
+src/api/__pycache__
+src/api/__pycache__/
+
+static/
